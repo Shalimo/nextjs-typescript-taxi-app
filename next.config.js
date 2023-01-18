@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
+  // env: {
+  //   GOOGLE_MAP_KEY: 'AIzaSyDjjCRBDsH_R-hBHrlPqKnv2PnvrMXGYlQ'
+  // }
 }
 
 module.exports = nextConfig

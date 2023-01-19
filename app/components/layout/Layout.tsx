@@ -26,7 +26,7 @@ const Layout:FC<PropsWithChildren<{title?: string}>> = ({children, title}) => {
                 content="Taxi App"
             />
         </Head>
-        <Script strategy='beforeInteractive' />
+        <Script strategy='beforeInteractive' src={`https://maps.googleapis.com/maps/api/js?key=${String(process.env.NEXT_PUBLIC_GOOGLE_MAP_KEY)}&libraries=places`}/>
             <div>
                 {loading ? <Spinner/> : children}
             </div>

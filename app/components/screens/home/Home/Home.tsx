@@ -1,6 +1,7 @@
 import Layout from "../../../layout/Layout"
-import FromInput from "../FromInput/FromInput"
+import FromInput from "../fromInput/FromInput"
 import GoogleMap from "../GoogleMap"
+import ToInput from "../toInput/ToInput"
 import styles from './Home.module.scss'
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
       <GoogleMap/>
       <div className={styles.formContainer}>
         <FromInput/>
+        <ToInput/>
       </div>
     </Layout>
   )

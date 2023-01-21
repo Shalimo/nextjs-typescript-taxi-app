@@ -1,11 +1,12 @@
 import {FC, useEffect, useRef, useState} from 'react'
-import PlacesAutocomplete from 'react-places-autocomplete'
+import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
 import styles from './Input.module.scss'
 import {HiOutlineSearch} from 'react-icons/hi'
 import Spinner from '../Spinner/Spinner'
+import { Coords } from 'google-map-react'
 
 interface IInput {
-    choosedPlace: () => void,
+  choosedPlace: (place: string, location: Coords) => void,
     type: 'from' | 'to'
 }
 
@@ -23,7 +24,13 @@ const Input:FC<IInput> = ({choosedPlace, type}) => {
 
   const [place, setPlace] = useState('')
 
-  const handleSelect = () => {}
+  const handleSelect = (place: string) => {
+    geocodeByAddress(place).then(res =>
+      getLatLng(res[0])).then(location => {
+        choosedPlace(place, location)
+        setPlace(place)
+      }).catch(error => console.error('Error', error));
+  }
 
   const isFrom = type === 'from'
 

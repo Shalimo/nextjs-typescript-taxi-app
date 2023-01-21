@@ -9,12 +9,12 @@ import styles from './Home.module.scss'
 const Home = () => {
   return (
     <Layout title="Order">
-      <GoogleMap/>
+      <GoogleMap />
       <div className={styles.formContainer}>
-        <FromInput/>
-        <ToInput/>
-        <Variants/>
-        <Button/>
+        <FromInput />
+        <ToInput />
+        <Variants />
+        <Button />
       </div>
     </Layout>
   )

@@ -46,7 +46,7 @@ const Input:FC<IInput> = ({choosedPlace, type}) => {
         {
            ({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
             <div className={isFrom ? 'mb-5' : 'mb-0'}>
-                <div className={styles.inputContainer} onClick={setFocus}>
+               <div className={styles.inputContainer} onClick={setFocus}>
                     <HiOutlineSearch className='mr-1'/>
                     <input className='outline-none w-full' {...getInputProps({
                         ref: inputRef,

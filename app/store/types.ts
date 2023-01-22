@@ -5,7 +5,7 @@ export type TypeFromTo = {
 }
 
 export type TypeTaxiInitialState = {
-    toPlace: {},
-    fromPlace: {},
+    toPlace: TypeFromTo,
+    fromPlace: TypeFromTo,
     variant: string
 }

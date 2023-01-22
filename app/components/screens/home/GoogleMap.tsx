@@ -1,6 +1,10 @@
+import { useTypedSelector } from "@/app/hooks/useTypedSelector"
 import GoogleMapReact from "google-map-react"
 
 const GoogleMap = () => {
+
+  const { fromPlace } = useTypedSelector(state => state.slice)
+
   return (
     <div className="h-screen w-full">
         <GoogleMapReact
@@ -16,6 +20,12 @@ const GoogleMap = () => {
           zoomControl: false,
           fullscreenControl: false
         }}
+        center={fromPlace.location?.lat ?
+          {
+            lat: fromPlace.location.lat,
+            lng: fromPlace.location.lng
+          } : undefined
+        }
     />
     </div>
   )

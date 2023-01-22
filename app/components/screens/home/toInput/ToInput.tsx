@@ -1,10 +1,13 @@
 import Input from "@/app/components/ui/Input/Input"
+import { useActions } from "@/app/hooks/useActions"
 import { Coords } from "google-map-react"
 
 const ToInput = () => {
 
+  const { setToPlace } = useActions()
+
   const choosedPlace = (place: string, location: Coords) => {
-    console.log(`place choosed: ${place + location}`)
+    setToPlace({ location, place: place })
   }
 
   return (

@@ -7,7 +7,7 @@ import { Coords } from 'google-map-react'
 
 interface IInput {
   choosedPlace: (place: string, location: Coords) => void,
-    type: 'from' | 'to'
+  type: 'from' | 'to'
 }
 
 const Input:FC<IInput> = ({choosedPlace, type}) => {

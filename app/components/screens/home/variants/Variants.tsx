@@ -4,7 +4,7 @@ import { variants } from '@/app/data/data'
 
 const Variants = () => {
   return (
-    <div className='hide-scroll-bar mt-5 h-64 flex overflow-y-auto rounded-lg'>
+    <div className='hide-scroll-bar mt-5 h-64 flex overflow-y-auto rounded-lg shadow-slate-400 shadow-md'>
         <div className={styles.variantsContainer}>
             {variants.map(variant => (
                 <button key={variant.id} className={styles.variantButton}>

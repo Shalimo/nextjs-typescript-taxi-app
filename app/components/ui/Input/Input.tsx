@@ -13,12 +13,15 @@ interface IInput {
 
 const Input:FC<IInput> = ({choosedPlace, type}) => {
 
+  const [isFocus, setIsFocus] = useState(false)
+
   const { time } = useTypedSelector(state => state.slice)
 
   const inputRef = useRef<HTMLInputElement>(null)
 
   const setFocus = () => {
     inputRef?.current?.focus()
+    setIsFocus(true)
   }
 
   const [place, setPlace] = useState('')
@@ -35,7 +38,7 @@ const Input:FC<IInput> = ({choosedPlace, type}) => {
 
   useEffect(() => {
     
-    if (isFrom) {
+    if (isFrom && !isFocus) {
         setFocus()
     }
 

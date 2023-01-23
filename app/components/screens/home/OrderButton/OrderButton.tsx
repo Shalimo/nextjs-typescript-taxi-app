@@ -29,7 +29,7 @@ const OrderButton = () => {
 
     return (
         <div className="flex justify-center flex-col items-center">
-            <Button cb={orderHandler} isActive={isActive} title={title} success={success} />
+            <Button cb={orderHandler} isActive={isActive} title={title} />
             {success !== '' ? <div className="rounded-lg py-3 px-16 mt-5 mb-5 shadow-slate-400 shadow-md flex justify-center flex-col items-center bg-white font-bold">
                 <div>{`Ordered taxi: ${success}`}</div>
                 <div>{`From: ${fromPlace.place}`}</div>

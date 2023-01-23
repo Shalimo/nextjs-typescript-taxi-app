@@ -14,12 +14,8 @@ const Input:FC<IInput> = ({choosedPlace, type}) => {
 
     const inputRef = useRef<HTMLInputElement>(null)
 
-    const [isFocus, setIsFocus] = useState(false)
-
-
     const setFocus = () => {
-        inputRef?.current?.focus()
-        setIsFocus(true)
+      inputRef?.current?.focus()
     }
 
   const [place, setPlace] = useState('')

@@ -29,6 +29,10 @@ export const useRouteWay = () => {
             directionsRenderer.setOptions({
                 markerOptions: {
                     clickable: false
+                },
+                polylineOptions: {
+                    strokeColor: '#16A34A',
+                    strokeWeight: 5
                 }
             })
 

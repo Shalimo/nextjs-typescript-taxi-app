@@ -9,7 +9,7 @@ interface IMapApi {
 
 export const useRouteWay = () => {
 
-    const { setTime, setVariantOfTrip } = useActions()
+    const { setTime } = useActions()
 
     const { fromPlace, toPlace } = useTypedSelector(state => state.slice)
 

@@ -15,11 +15,11 @@ const Input:FC<IInput> = ({choosedPlace, type}) => {
 
   const { time } = useTypedSelector(state => state.slice)
 
-    const inputRef = useRef<HTMLInputElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
 
-    const setFocus = () => {
-      inputRef?.current?.focus()
-    }
+  const setFocus = () => {
+    inputRef?.current?.focus()
+  }
 
   const [place, setPlace] = useState('')
 

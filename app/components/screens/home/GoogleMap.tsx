@@ -1,9 +1,17 @@
-import { useTypedSelector } from "@/app/hooks/useTypedSelector"
 import GoogleMapReact from "google-map-react"
+import { useEffect } from "react"
+import { useRouteWay } from '../../../hooks/useRouteWay'
 
 const GoogleMap = () => {
 
-  const { fromPlace } = useTypedSelector(state => state.slice)
+  const { routeTrip, setMapApi, fromPlace, toPlace } = useRouteWay()
+
+  useEffect(() => {
+    if (fromPlace.location && toPlace.location) {
+      routeTrip()
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [fromPlace.location, toPlace.location])
 
   return (
     <div className="h-screen w-full">
@@ -26,6 +34,8 @@ const GoogleMap = () => {
             lng: fromPlace.location.lng
           } : undefined
         }
+        yesIWantToUseGoogleMapApiInternals
+        onGoogleApiLoaded={setMapApi}
     />
     </div>
   )

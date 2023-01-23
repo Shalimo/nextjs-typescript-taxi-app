@@ -7,6 +7,7 @@ import Button from "@/app/components/ui/button/Button"
 import styles from './Home.module.scss'
 
 const Home = () => {
+
   return (
     <Layout title="Order">
       <GoogleMap />

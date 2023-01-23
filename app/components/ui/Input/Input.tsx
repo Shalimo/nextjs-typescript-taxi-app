@@ -47,7 +47,7 @@ const Input:FC<IInput> = ({choosedPlace, type}) => {
     }
 
     
-  }, [isFrom, time])
+  }, [isFrom, time, isFocus])
 
 
   return (

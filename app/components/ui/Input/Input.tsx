@@ -4,6 +4,7 @@ import styles from './Input.module.scss'
 import {HiOutlineSearch} from 'react-icons/hi'
 import Spinner from '../Spinner/Spinner'
 import { Coords } from 'google-map-react'
+import { useTypedSelector } from "@/app/hooks/useTypedSelector"
 
 interface IInput {
   choosedPlace: (place: string, location: Coords) => void,
@@ -11,6 +12,8 @@ interface IInput {
 }
 
 const Input:FC<IInput> = ({choosedPlace, type}) => {
+
+  const { time } = useTypedSelector(state => state.slice)
 
     const inputRef = useRef<HTMLInputElement>(null)
 
@@ -35,8 +38,13 @@ const Input:FC<IInput> = ({choosedPlace, type}) => {
     if (isFrom) {
         setFocus()
     }
+
+    if (time === '') {
+      setPlace('')
+    }
+
     
-}, [isFrom])
+  }, [isFrom, time])
 
 
   return (

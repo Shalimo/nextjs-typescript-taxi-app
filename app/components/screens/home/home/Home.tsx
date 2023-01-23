@@ -22,8 +22,9 @@ const Home = () => {
   const showInfo = () => {
     setInfo(!info)
 
-    setTimeout(() => {
+    const timeoutID = setTimeout(() => {
       setInfo(false)
+      clearTimeout(timeoutID)
     }, 5000)
   }
 

@@ -4,7 +4,8 @@ import { TypeTaxiInitialState, TypeFromTo } from './types';
 const initialState: TypeTaxiInitialState = {
     toPlace: {} as TypeFromTo,
     fromPlace: {} as TypeFromTo,
-    selectedVariant: '1'
+    selectedVariant: '1',
+    time: 0
 }
 
 export const slice = createSlice({
@@ -21,6 +22,10 @@ export const slice = createSlice({
 
         setVariantOfTrip: (state, { payload }) => {
             state.selectedVariant = payload
+        },
+
+        setTime: (state, { payload }) => {
+            state.time = payload
         }
     }
 })

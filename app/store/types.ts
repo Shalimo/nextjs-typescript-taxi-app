@@ -7,5 +7,6 @@ export type TypeFromTo = {
 export type TypeTaxiInitialState = {
     toPlace: TypeFromTo,
     fromPlace: TypeFromTo,
-    selectedVariant: string
+    selectedVariant: string,
+    time: number
 }

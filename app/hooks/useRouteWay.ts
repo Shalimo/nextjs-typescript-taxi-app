@@ -1,4 +1,5 @@
 import { useTypedSelector } from "@/app/hooks/useTypedSelector"
+import { useActions } from "./useActions"
 import { useState } from "react"
 
 interface IMapApi {
@@ -7,6 +8,9 @@ interface IMapApi {
 }
 
 export const useRouteWay = () => {
+
+    const { setTime, setVariantOfTrip } = useActions()
+
     const { fromPlace, toPlace } = useTypedSelector(state => state.slice)
 
     const [mapAPI, setMapApi] = useState<IMapApi>({} as IMapApi)
@@ -23,6 +27,9 @@ export const useRouteWay = () => {
                 travelMode: google.maps.TravelMode.DRIVING
             }).then(res => {
                 directionsRenderer.setDirections(res)
+                if (res.routes[0].legs[0].duration?.value) {
+                    setTime((res.routes[0].legs[0].duration?.value) / 60)
+                }
 
             }).catch(err => { alert('Cant get directions because it goes across the sea') })
 

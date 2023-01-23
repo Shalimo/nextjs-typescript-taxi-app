@@ -12,7 +12,7 @@ const OrderButton = () => {
         setTimeout(() => setIsOrdered(false), 2000)
     }
 
-    const isActive = !time && !selectedVariant
+    const isActive = time && selectedVariant ? true : false
     const title = !isOrdered ? 'Order a taxi' : 'Successfully ordered'
 
     return (

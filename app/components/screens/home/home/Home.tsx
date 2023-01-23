@@ -5,8 +5,9 @@ import ToInput from "../toInput/ToInput"
 import Variants from "../variants/Variants"
 import OrderButton from "../OrderButton/OrderButton"
 import styles from './Home.module.scss'
-import { useRef, useState } from "react"
+import { useState } from "react"
 import { BiHide } from 'react-icons/bi'
+import { IoInformationCircleSharp } from 'react-icons/io5'
 
 const Home = () => {
 
@@ -20,7 +21,11 @@ const Home = () => {
   return (
     <Layout title="Order">
       <GoogleMap />
-      <BiHide cursor='pointer' onClick={hideInterface} className={styles.hideButton} />
+      <div className={styles.menuContainer}>
+        <BiHide cursor='pointer' onClick={hideInterface} className={styles.hideButton} />
+        <IoInformationCircleSharp className={styles.infoButton} />
+      </div>
+
       <div className={styles.formContainer} style={hide ? { display: 'none' } : { display: 'flex' }}>
         <FromInput />
         <ToInput />

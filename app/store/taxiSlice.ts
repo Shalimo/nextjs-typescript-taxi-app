@@ -4,7 +4,7 @@ import { TypeTaxiInitialState, TypeFromTo } from './types';
 const initialState: TypeTaxiInitialState = {
     toPlace: {} as TypeFromTo,
     fromPlace: {} as TypeFromTo,
-    selectedVariant: '',
+    selectedVariant: '1',
     time: ''
 }
 

@@ -1,11 +1,23 @@
-.hideButton {
-    @apply absolute h-10 w-10 right-5 top-5 flex justify-center flex-col items-center z-30;
+.menuContainer {
+    @apply absolute bg-white w-auto h-auto z-50 right-5 top-5 p-5 rounded-lg shadow-slate-400 shadow-md;
 
-    &:hover {
-        @apply text-red-400 transition-colors duration-300 ease-in-out
+    .hideButton {
+        @apply absolute h-10 w-10 ;
+    
+        &:hover {
+            @apply text-red-400 transition-colors duration-300 ease-in-out
+        }
+    }
+
+    .infoButton {
+        @apply h-10 w-10 z-30 ml-14 cursor-pointer;
+
+        &:hover {
+            @apply text-red-400 transition-colors duration-300 ease-in-out
+        }
     }
 }
 
 .formContainer {
-    @apply absolute z-10 left-5 bottom-10 w-11/12 flex justify-center flex-col items-center;
+    @apply absolute z-10 left-0 bottom-0 top-[30%] right-0 flex justify-center flex-col items-center;
 }

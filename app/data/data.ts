@@ -7,33 +7,39 @@ import premium from '../assets/icons/premium.png'
 interface IVariants {
     id: string,
     title: string,
-    car: string
+    car: string,
+    rate: number
 }
 
 export const variants: IVariants[] = [
     {
         id: '1',
         title: 'Standart',
-        car: simpleCar.src
+        car: simpleCar.src,
+        rate: 0.7
     },
     {
         id: '2',
-        title: 'Fast',
-        car: fastCar.src
+        title: 'Premium',
+        car: premium.src,
+        rate: 1.5
     },
     {
         id: '3',
-        title: 'Green',
-        car: electricCar.src
+        title: 'Premium-x',
+        car: fastCar.src,
+        rate: 2
     },
     {
         id: '4',
-        title: 'XL',
-        car: xl.src
+        title: 'Green',
+        car: electricCar.src,
+        rate: 0.9
     },
     {
         id: '5',
-        title: 'Premium',
-        car: premium.src
-    },
+        title: 'XL',
+        car: xl.src,
+        rate: 1.6
+    }
 ]

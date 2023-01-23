@@ -10,7 +10,7 @@ const Layout:FC<PropsWithChildren<{title?: string}>> = ({children, title}) => {
     useEffect(() => {
         setLoading(true)
 
-        const timeoutID = setTimeout(() => { setLoading(false) }, 2000)
+        const timeoutID = setTimeout(() => { setLoading(false) }, 1500)
 
         return () => {
             clearTimeout(timeoutID)

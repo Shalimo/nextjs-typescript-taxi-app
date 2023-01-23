@@ -13,7 +13,10 @@ const OrderButton = () => {
 
     const orderHandler = () => {
         setIsOrdered(true)
-        setTimeout(() => setIsOrdered(false), 2000)
+        const orderedId = setTimeout(() => {
+            setIsOrdered(false)
+            clearTimeout(orderedId)
+        }, 3500)
         setVariantOfTrip('1')
         setTime('')
         variants.find(variant => variant.id === selectedVariant ? setSuccess(variant.title) : '')
@@ -21,7 +24,7 @@ const OrderButton = () => {
         const successId = setTimeout(() => {
             setSuccess('')
             clearTimeout(successId)
-        }, 2000)
+        }, 3500)
     }
 
     const isActive = time && selectedVariant ? true : false

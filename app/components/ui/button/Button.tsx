@@ -1,7 +1,16 @@
-const Button = () => {
+import styles from './Button.module.scss'
+import { ButtonHTMLAttributes, FC } from 'react'
+
+interface IButton {
+  cb: () => void,
+  isActive?: boolean,
+  title: string
+}
+
+const Button: FC<IButton> = ({ cb, isActive, title }) => {
   return (
-    <button className="rounded-[30px] py-3 px-16 mt-5 bg-green-600 shadow-slate-400 shadow-md">
-        <p className="text-white font-bold">Choose a taxi</p>
+    <button className={isActive ? styles.button : styles.inativeButton} onClick={cb}>
+      <p>{title}</p>
     </button>
   )
 }

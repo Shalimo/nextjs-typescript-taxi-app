@@ -1,0 +1,23 @@
+.button {
+    @apply rounded-[30px] py-3 px-16 mt-5 bg-green-600 shadow-slate-400 shadow-md;
+
+    p {
+        @apply text-white font-bold
+    }
+
+    &:hover {
+        @apply bg-green-800 transition-colors duration-300 ease-in-out;
+
+        p {
+            @apply transition-colors duration-300 ease-in-out
+        }
+    }
+}
+
+.inativeButton {
+    @apply rounded-[30px] py-3 px-16 mt-5 bg-gray-400 shadow-slate-400 shadow-md cursor-not-allowed;
+
+    p {
+        @apply text-white font-bold
+    }
+}

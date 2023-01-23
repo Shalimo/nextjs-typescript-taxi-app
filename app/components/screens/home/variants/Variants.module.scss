@@ -3,6 +3,14 @@
 
         .variantButton {
             @apply bg-white px-4 py-2;
+
+            .active {
+                @apply opacity-10;
+            }
+
+            .inactive {
+                @apply opacity-5;
+            }
         }
     }
 

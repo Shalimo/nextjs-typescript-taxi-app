@@ -3,7 +3,7 @@ import FromInput from "../fromInput/FromInput"
 import GoogleMap from "../GoogleMap"
 import ToInput from "../toInput/ToInput"
 import Variants from "../variants/Variants"
-import Button from "@/app/components/ui/button/Button"
+import OrderButton from "../OrderButton/OrderButton"
 import styles from './Home.module.scss'
 
 const Home = () => {
@@ -15,7 +15,7 @@ const Home = () => {
         <FromInput />
         <ToInput />
         <Variants />
-        <Button />
+        <OrderButton />
       </div>
     </Layout>
   )

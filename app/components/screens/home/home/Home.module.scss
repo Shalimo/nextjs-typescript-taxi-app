@@ -1,8 +1,8 @@
 .menuContainer {
-    @apply absolute bg-white w-auto h-auto z-50 right-5 top-5 p-5 rounded-lg shadow-slate-400 shadow-md;
+    @apply flex absolute right-5 top-5 bg-white z-50 p-5 rounded-lg shadow-slate-400 shadow-md;
 
     .hideButton {
-        @apply absolute h-10 w-10 ;
+        @apply h-10 w-10 cursor-pointer;
     
         &:hover {
             @apply text-red-400 transition-colors duration-300 ease-in-out
@@ -10,7 +10,7 @@
     }
 
     .infoButton {
-        @apply h-10 w-10 z-30 ml-14 cursor-pointer;
+        @apply h-10 w-10 z-30 ml-5 cursor-pointer;
 
         &:hover {
             @apply text-red-400 transition-colors duration-300 ease-in-out
@@ -20,4 +20,9 @@
 
 .formContainer {
     @apply absolute z-10 left-0 bottom-0 top-[30%] right-0 flex justify-center flex-col items-center;
+}
+
+.popup {
+    @apply absolute top-28 right-5 flex justify-center flex-col items-center bg-white z-50 p-5 rounded-lg shadow-slate-400 shadow-md w-[25rem] h-24;
+    @apply font-bold
 }

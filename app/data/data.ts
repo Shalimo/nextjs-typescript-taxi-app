@@ -11,6 +11,10 @@ interface IVariants {
     rate: number
 }
 
+interface IInfo {
+    information: string
+}
+
 export const variants: IVariants[] = [
     {
         id: '1',
@@ -43,3 +47,7 @@ export const variants: IVariants[] = [
         rate: 1.6
     }
 ]
+
+export const information: IInfo = {
+    information: 'To order a taxi, you must specify the starting and final destination. Then you need to specify the type of car and order a taxi.'
+}

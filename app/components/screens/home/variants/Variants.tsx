@@ -19,7 +19,7 @@ const Variants = () => {
                   <div className='flex flex-row ml-5 w-52'>
                     <div className='flex flex-col'>
                       <p className='font-bold mr-auto'>{variant.title}</p>
-                      <p className='font-bold text-[10px] mr-auto'>{typeof time === 'string' ? null : `${Math.floor(time)} min.`}</p>
+                      <p className='font-bold text-[10px] mr-auto'>{typeof time === 'string' ? null : `Time of Trip: ${Math.floor(time)} min.`}</p>
                     </div>
                     <p className='ml-auto font-bold'>{`${typeof time === 'number' ? Math.floor(time * variant.rate) + '$' : ''}`}</p>
                     </div>

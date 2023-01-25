@@ -49,5 +49,5 @@ export const variants: IVariants[] = [
 ]
 
 export const information: IInfo = {
-    information: 'To order a taxi, you must specify the starting and final destination. Then you need to specify the type of car and order a taxi.'
+    information: 'To order a taxi, you should type your current location and choose a ride destination. Then select your preferred ride-type and confirm your request.'
 }

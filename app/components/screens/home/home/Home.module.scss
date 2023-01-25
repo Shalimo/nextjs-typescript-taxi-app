@@ -25,7 +25,7 @@
 }
 
 .popup {
-    @apply absolute top-28 right-5 flex justify-center flex-col items-center bg-white z-50 p-5 rounded-lg shadow-slate-400 shadow-md w-[25rem] h-24;
+    @apply absolute top-28 right-5 flex justify-center flex-col items-center bg-white z-50 p-5 rounded-lg shadow-slate-400 shadow-md w-[25rem] h-28;
 
     @include media(mobile) {
         @apply w-[18rem] h-36 p-5;
